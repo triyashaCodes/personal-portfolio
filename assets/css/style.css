@@ -332,9 +332,16 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.avatar-box img {
+  border-radius: 50%;
+}
+
 
 .info-content .name {
   color: var(--white-2);
@@ -1831,6 +1838,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
+    width: 500px;
   }
 
   .sidebar-info { flex-direction: column; }
@@ -1838,9 +1846,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   .avatar-box img { width: 150px; }
 
   .info-content .name {
-    white-space: nowrap;
-    text-align: center;
-  }
+      font-size: 1.2rem; /* Further reduce font size */
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+    }
 
   .info-content .title { margin: auto; }
 
@@ -1880,3 +1890,99 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/**
+Additional
+**/
+/* Tech Stack Styles */
+.tech-stack {
+  margin-block: 30px;
+}
+
+.tech-stack-title {
+  margin-bottom: 30px;
+}
+
+.tech-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.tech-category {
+  background: var(--eerie-black-2);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tech-category h4 {
+  margin-bottom: 20px;
+  color: var(--light-gray);
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.tech-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 15px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 10px 5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background: var(--eerie-black-1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tech-item ion-icon {
+  font-size: 2em;
+  color: var(--vegas-gold);
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover ion-icon {
+  transform: scale(1.1);
+}
+
+.tech-item span {
+  font-size: 0.85em;
+  color: var(--light-gray);
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (min-width: 580px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tech-category h4 {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .tech-item ion-icon {
+    font-size: 2.2em;
+  }
+  
+  .tech-item span {
+    font-size: 0.9em;
+  }
+}
+
