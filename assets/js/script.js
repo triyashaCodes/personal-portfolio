@@ -13,22 +13,14 @@ function switchTab(tabName) {
   activityBtns.forEach(b => b.classList.toggle('active', b.dataset.activity === tabName));
   if (breadcrumb) breadcrumb.textContent = tabName + '.md';
   generateLineNumbers();
+
+  if (tabName === 'experience') {
+    setTimeout(animateTimeline, 80);
+  }
 }
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => switchTab(tab.dataset.tab));
-});
-
-activityBtns.forEach(btn => {
-  btn.addEventListener('click', () => switchTab(btn.dataset.activity));
-});
-
-// ─── File tree folder toggle ───
-
-function toggleFolder(id) {
-  const folder = document.getElementById(id);
-  if (folder) folder.classList.toggle('closed');
-}
+tabs.forEach(tab => tab.addEventListener('click', () => switchTab(tab.dataset.tab)));
+activityBtns.forEach(btn => btn.addEventListener('click', () => switchTab(btn.dataset.activity)));
 
 // ─── Line numbers ───
 
@@ -37,19 +29,38 @@ function generateLineNumbers() {
   if (!activePage) return;
   const lnEl = activePage.querySelector('.line-numbers');
   if (!lnEl) return;
-
   const content = activePage.querySelector('.page-content');
   if (!content) return;
-
   const lineHeight = 24.5;
-  const contentHeight = content.scrollHeight;
-  const count = Math.max(Math.ceil(contentHeight / lineHeight), 30);
-
+  const count = Math.max(Math.ceil(content.scrollHeight / lineHeight), 30);
   let html = '';
   for (let i = 1; i <= count; i++) {
     html += `<div style="padding:0 12px;line-height:${lineHeight}px">${i}</div>`;
   }
   lnEl.innerHTML = html;
+}
+
+// ─── Timeline animations ───
+
+function animateTimeline() {
+  const items = document.querySelectorAll('.timeline-item');
+  const timeline = document.querySelector('.timeline');
+
+  // Reset first (so re-visiting the tab re-plays)
+  items.forEach(item => {
+    item.classList.remove('visible');
+  });
+  if (timeline) timeline.classList.remove('line-drawn');
+
+  // Stagger items in
+  items.forEach((item, i) => {
+    setTimeout(() => item.classList.add('visible'), i * 90);
+  });
+
+  // Draw line after first item appears
+  if (timeline) {
+    setTimeout(() => timeline.classList.add('line-drawn'), 150);
+  }
 }
 
 // ─── Init ───
