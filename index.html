@@ -3,885 +3,505 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Triyasha's Site</title>
-
-  <!--
-    - favicon
-  -->
+  <title>Triyasha Ghosh Dastidar</title>
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+  <div class="app">
 
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/Triyasha_profile.jpeg" alt="Triyasha" width="100">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Triyasha Ghosh Dastidar</h1>
-
-          <p class="title">Software/ ML Engineer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
+    <!-- ─── ACTIVITY BAR ─── -->
+    <div class="activity-bar">
+      <div class="activity-top">
+        <button class="activity-btn active" data-activity="about" title="About">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
         </button>
-
+        <button class="activity-btn" data-activity="experience" title="Experience">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          </svg>
+        </button>
+        <button class="activity-btn" data-activity="projects" title="Projects">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </button>
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:tg2936@columbia.edu" class="contact-link">tg2936@columbia.edu</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>New York City, New York, USA</address>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">University</p>
-
-              <address>Columbia University</address>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">University</p>
-
-              <address>BITS Pilani</address>
-            </div>
-
-          </li>
-
-
-          
-          <ul class="social-list">
-
-            <li class="social-item">
-              <a href="https://github.com/triyashaCodes" target="_blank" class="social-link">
-                <ion-icon name="logo-github" style="color: var(--white-2);"></ion-icon>
-              </a>
-            </li>
-  
-  
-            <li class="social-item">
-              <a href="http://linkedin.com/in/triyasha-gd/" target="_blank" class="social-link">
-                <ion-icon name="logo-linkedin" style="color: var(--white-2);"></ion-icon>
-              </a>
-            </li>
-  
-            <li class="social-item">
-              <a href="https://scholar.google.com/citations?user=FaNgf2YAAAAJ&hl=en" target="_blank" class="social-link">
-                <ion-icon name="school-outline" style="color: var(--white-2);"></ion-icon>
-              </a>
-            </li>
-  
-          </ul>
-  
-
+      <div class="activity-bottom">
+        <a href="https://github.com/triyashaCodes" target="_blank" class="activity-btn" title="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="http://linkedin.com/in/triyasha-gd/" target="_blank" class="activity-btn" title="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=FaNgf2YAAAAJ&hl=en" target="_blank" class="activity-btn" title="Google Scholar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </a>
       </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <a href="./assets/docs/Triyasha Ghosh Dastidar.pdf" class="navbar-link">Resume</a>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Experience</button>
-          </li>
-
-          <li class="navbar-item">
-            <a href="https://github.com/triyashaCodes/Practical-DL-Assignments/tree/main" class="navbar-link">Projects</a>
-          </li>
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li> -->
-
-          <!-- <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li> -->
-
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hello there, I’m Triyasha!
-          </p>
-          <p>
-            🚀 I’m a graduate student at Columbia University pursuing an M.S. in Computer Science, specializing in Machine Learning. I am actively seeking internships in MLE and SWE for summer 2025. Happy to connect, if you have any roles open!
-          </p>
-          <p>
-            🔬 My interests lie in AI, Machine Learning, and Cloud Computing, with a focus on Natural Language Processing (NLP) and Computer Vision (CV).
-          </p>
-          <p>
-            📚 I am currently exploring recent technologies in AI and how to deploy and maintain scalable AI-driven applications.
-          </p>
-          <p>
-            💡 I enjoy following recent advancements in LLMs, and I am passionate about leveraging AI to solve real-world challenges.
-          </p>
-          <p>
-            💻 Prior to my Masters, I worked at Nutanix as a Software Developer, where I built scalable, fault-tolerant backend systems in the Security engineering team using AWS and GCP. My experience in developing security-driven systems and APIs has sharpened my technical skills and shaped my approach to developing robust enterprise solutions.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Deep Learning</h4>
-                <p class="service-item-text">
-                  I have experience in developing and optimizing deep learning models for large-scale real-world applications. With experience in building BERT and RoBERTa-based models for NLP, I focus on enhancing model performance and scalability, including fine-tuning LLMs, created automated prompt systems and stable deployment to reduce latency.
-                </p>
-              </div>
-            </li>
-            
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="development icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Software and Cloud Engineering</h4>
-                <p class="service-item-text">
-                  With experience at Nutanix, I develop scalable backend systems in Golang and Python, focusing on secure, high-performance APIs. I leverage AWS and GCP for scalable infrastructure, database management, and cloud workflow orchestration using services like S3, Lambda, and RDS.
-                </p>
-              </div>
-            </li>
-            
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="analytics icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Analytics</h4>
-                <p class="service-item-text">
-                  I apply data analytics techniques with SQL and BigQuery to extract insights from large datasets. My work includes developing recommendation systems, predictive models, and using machine learning algorithms for data-driven decisions and optimization.
-                </p>
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-quote.svg" alt="blog icon" width="40">
-              </div>
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Blog</h4>
-                <p class="service-item-text">
-                  I write technical blogs to share insights on the latest technologies and concepts I learn. These blogs cover topics such as deep learning, software engineering, and cloud computing, providing valuable resources for developers and tech enthusiasts.
-                </p>
-              </div>
-            </li>
-            
-            
-
-          </ul>
-
-        </section>
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-          </section>
-
-        </div>
-
-        <!--
-          - tech stack
-        -->
-        <section class="tech-stack">
-          <h3 class="h3 tech-stack-title">Tech Stack</h3>
-
-          <div class="tech-grid">
-            <!-- Programming Languages -->
-            <div class="tech-category">
-              <h4 class="h4">Programming Languages</h4>
-              <div class="tech-items">
-                <div class="tech-item">
-                  <ion-icon name="logo-python"></ion-icon>
-                  <span>Python</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="code-slash-outline"></ion-icon>
-                  <span>Golang</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="code-outline"></ion-icon>
-                  <span>C++</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="logo-javascript"></ion-icon>
-                  <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="cafe-outline"></ion-icon>
-                  <span>Java</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="logo-angular"></ion-icon>
-                  <span>AngularJS</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- ML & AI -->
-            <div class="tech-category">
-              <h4 class="h4">Machine Learning & AI</h4>
-              <div class="tech-items">
-                <div class="tech-item">
-                  <ion-icon name="flame-outline"></ion-icon>
-                  <span>PyTorch</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="terminal-outline"></ion-icon>
-                  <span>TensorFlow</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="analytics-outline"></ion-icon>
-                  <span>scikit-learn</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="bar-chart-outline"></ion-icon>
-                  <span>Matplotlib</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cloud & DevOps -->
-            <div class="tech-category">
-              <h4 class="h4">Cloud & DevOps</h4>
-              <div class="tech-items">
-                <div class="tech-item">
-                  <ion-icon name="logo-amazon"></ion-icon>
-                  <span>AWS</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="logo-google"></ion-icon>
-                  <span>GCP</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="cube-outline"></ion-icon>
-                  <span>Docker</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="apps-outline"></ion-icon>
-                  <span>Kubernetes</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="git-network-outline"></ion-icon>
-                  <span>Jenkins</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Database & Analytics -->
-            <div class="tech-category">
-              <h4 class="h4">Database & Analytics</h4>
-              <div class="tech-items">
-                <div class="tech-item">
-                  <ion-icon name="server-outline"></ion-icon>
-                  <span>SQL</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="analytics-outline"></ion-icon>
-                  <span>Big Query</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Development Tools -->
-            <div class="tech-category">
-              <h4 class="h4">Development Tools</h4>
-              <div class="tech-items">
-                <div class="tech-item">
-                  <ion-icon name="logo-github"></ion-icon>
-                  <span>Git</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="code-working-outline"></ion-icon>
-                  <span>VS Code</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="clipboard-outline"></ion-icon>
-                  <span>Jira</span>
-                </div>
-                <div class="tech-item">
-                  <ion-icon name="logo-tux"></ion-icon>
-                  <span>Linux</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </article>
-
-      <!--
-        - experience
-      -->
-      <article class="experience" data-page="experience">
-
-        <header>
-          <h2 class="h2 article-title">Timeline</h2>
-        </header>
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Experience & Education</h3>
-          </div>
-        
-          <ol class="timeline-list">
-            <!-- Columbia -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">MS in Computer Science | Columbia University</h4>
-              <span>September 2024 — Present</span>
-              <p class="timeline-location">New York, USA</p>
-              <div class="timeline-text">
-                <ul class="timeline-list-items">
-                  <li>Graduate Research Assistant (October 2024 - December 2024)</li>
-                </ul>
-              </div>
-            </li>
-        
-            <!-- Nutanix Full-Time -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Member of Technical Staff 2 | Nutanix</h4>
-              <span>Aug 2021 — Jul 2024</span>
-              <p class="timeline-location">Bangalore, India</p>
-              <div class="timeline-text">
-                <ul class="timeline-list-items">
-                  <li>Led development of secure password management system in Golang, reducing security breaches by 20% and improving industry compliance standards.</li>
-                  <li>Implemented multi-party authorization workflow and default password elimination feature, enabling $3B market opportunity.</li>
-                  <li>Won Global Nutanix Hackathon (250+ teams) for developing AI-based security recommendation system, advancing to product development.</li>
-                </ul>
-              </div>
-            </li>
-        
-            <!-- Nutanix Intern -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Software Intern | Nutanix</h4>
-              <span>Aug 2021 — June 2022</span>
-              <p class="timeline-location">Bangalore, India</p>
-              <div class="timeline-text">
-                <ul class="timeline-list-items">
-                  <li>Developed end-to-end dashboard for cluster security, centralizing vulnerability management and STIG compliance.</li>
-                  <li>Automated regression testing framework, saving 50 hours per week in manual effort.</li>
-                </ul>
-              </div>
-            </li>
-        
-            <!-- AIISC -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Research Intern | AIISC, University of South Carolina</h4>
-              <span>Oct 2020 — Jan 2022</span>
-              <p class="timeline-location">Columbia, SC</p>
-              <div class="timeline-text">
-                <ul class="timeline-list-items">
-                  <li>Developed BERT-based models achieving 85% accuracy in analyzing 10,000+ Reddit posts for substance abuse detection.</li>
-                  <li>Created knowledge-assisted RoBERTa model for mental health symptom identification with 2.5% improved recall.</li>
-                </ul>
-              </div>
-            </li>
-        
-            <!-- University of Sheffield -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Summer Research Intern | University of Sheffield</h4>
-              <span>Jun 2021 — Aug 2021</span>
-              <p class="timeline-location">Sheffield, UK</p>
-              <div class="timeline-text">
-                <ul class="timeline-list-items">
-                  <li>Developed multilingual ML model for detecting abuse on Twitter through emoji analysis, improving detection across six languages.</li>
-                </ul>
-              </div>
-            </li>
-        
-            <!-- BITS Pilani -->
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">B.E. Computer Science, M.Sc. Chemistry| BITS Pilani, Hyderabad Campus</h4>
-              <span>August 2017 — June 2022</span>
-              <p class="timeline-location">Hyderabad, India</p>
-            </li>
-          </ol>
-        </section>
-      </article>
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <!-- <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
     </div>
 
-  </main>
+    <!-- ─── SIDEBAR / FILE EXPLORER ─── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-title">EXPLORER</div>
 
+      <div class="file-tree">
+        <div class="tree-folder open" id="folder-profile">
+          <div class="tree-folder-header" onclick="toggleFolder('folder-profile')">
+            <span class="chevron">▾</span>
+            <span class="folder-name">TRIYASHA</span>
+          </div>
+          <div class="tree-folder-contents">
+            <div class="profile-card">
+              <div class="avatar-wrap">
+                <img src="./assets/images/Triyasha_profile.jpeg" alt="Triyasha" class="avatar">
+                <span class="status-dot"></span>
+              </div>
+              <div class="profile-text">
+                <h1 class="profile-name">Triyasha<br>Ghosh Dastidar</h1>
+                <p class="profile-role">Software / ML Engineer</p>
+                <span class="badge-open">● Open to Roles</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="tree-folder open" id="folder-contact">
+          <div class="tree-folder-header" onclick="toggleFolder('folder-contact')">
+            <span class="chevron">▾</span>
+            <span class="folder-name">CONTACT</span>
+          </div>
+          <div class="tree-folder-contents">
+            <ul class="tree-list">
+              <li class="tree-item">
+                <svg class="tree-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:tg2936@columbia.edu">tg2936@columbia.edu</a>
+              </li>
+              <li class="tree-item">
+                <svg class="tree-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                New York City, USA
+              </li>
+              <li class="tree-item">
+                <svg class="tree-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Columbia University
+              </li>
+            </ul>
+          </div>
+        </div>
 
+        <div class="tree-folder open" id="folder-links">
+          <div class="tree-folder-header" onclick="toggleFolder('folder-links')">
+            <span class="chevron">▾</span>
+            <span class="folder-name">LINKS</span>
+          </div>
+          <div class="tree-folder-contents">
+            <ul class="tree-list">
+              <li class="tree-item file">
+                <svg class="tree-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <a href="https://github.com/triyashaCodes" target="_blank">github.com/triyashaCodes</a>
+              </li>
+              <li class="tree-item file">
+                <svg class="tree-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <a href="http://linkedin.com/in/triyasha-gd/" target="_blank">linkedin/triyasha-gd</a>
+              </li>
+              <li class="tree-item file">
+                <svg class="tree-icon file-pdf" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <a href="./assets/docs/Triyasha Ghosh Dastidar.pdf" target="_blank">resume.pdf</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      <div class="sidebar-resize-handle" id="resizeHandle"></div>
+    </aside>
 
+    <!-- ─── MAIN EDITOR ─── -->
+    <div class="editor-area">
 
-  <!--
-    - custom js link
-  -->
+      <!-- Tab bar -->
+      <div class="tab-bar">
+        <button class="editor-tab active" data-tab="about">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          about.md
+        </button>
+        <button class="editor-tab" data-tab="experience">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          experience.md
+        </button>
+        <button class="editor-tab" data-tab="projects">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          projects.md
+        </button>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <span class="bc-root">portfolio</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-current" id="breadcrumb-current">about.md</span>
+      </div>
+
+      <!-- Pages -->
+      <div class="editor-content">
+
+        <!-- ─── ABOUT ─── -->
+        <article class="page active" data-page="about">
+          <div class="line-numbers" id="ln-about"></div>
+          <div class="page-content">
+
+            <div class="code-comment"># Hello, World.</div>
+            <h2 class="page-title">About Me</h2>
+
+            <div class="prose">
+              <p>Hey, I'm <span class="token-fn">Triyasha</span> — a graduate student at <span class="token-str">Columbia University</span> pursuing an M.S. in Computer Science, specializing in <span class="token-kw">Machine Learning</span>.</p>
+              <p>My interests span <span class="token-kw">NLP</span>, <span class="token-kw">Computer Vision</span>, and <span class="token-kw">Cloud Computing</span>. I'm passionate about building scalable, AI-driven systems that solve real-world problems — from BERT-based abuse detection to enterprise security infrastructure.</p>
+              <p>Prior to my Masters, I spent three years at <span class="token-str">Nutanix</span> as a Software Developer, building fault-tolerant backend systems in <span class="token-fn">Golang</span> and <span class="token-fn">Python</span> for security-critical products on AWS and GCP.</p>
+              <p class="open-to-work-text">Currently seeking <span class="token-kw">MLE / SWE internships</span>. Let's build something great.</p>
+            </div>
+
+            <!-- What I do -->
+            <div class="section-header">
+              <span class="code-comment">// what I do</span>
+            </div>
+            <div class="cards-grid">
+              <div class="card">
+                <div class="card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3l.14-.02A2.5 2.5 0 0 1 9.5 2"/></svg>
+                </div>
+                <h4>Deep Learning</h4>
+                <p>Building and fine-tuning BERT, RoBERTa, and LSTM models for NLP and CV tasks. Experience with PyTorch and TensorFlow at scale, including LLM prompt engineering and AutoPrompt systems.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg>
+                </div>
+                <h4>Cloud & Backend</h4>
+                <p>Scalable backend systems in Golang and Python. Cloud infrastructure on AWS (S3, Lambda, RDS) and GCP. Containerized deployments with Docker and Kubernetes, CI/CD with Jenkins.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <h4>Data & Analytics</h4>
+                <p>Data-driven decision making with SQL, BigQuery, and ML. Built recommendation systems, predictive models, and analytics pipelines for large-scale datasets.</p>
+              </div>
+              <div class="card">
+                <div class="card-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </div>
+                <h4>Research & Writing</h4>
+                <p>Published research in NLP and social computing. I write technical blogs on deep learning, software engineering, and cloud architecture to share what I learn.</p>
+              </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="section-header">
+              <span class="code-comment">// tech stack</span>
+            </div>
+            <div class="tech-section">
+              <div class="tech-group">
+                <span class="tech-group-label">languages</span>
+                <div class="tech-tags">
+                  <span class="tag tag-blue">Python</span>
+                  <span class="tag tag-blue">Golang</span>
+                  <span class="tag tag-blue">C++</span>
+                  <span class="tag tag-blue">JavaScript</span>
+                  <span class="tag tag-blue">Java</span>
+                  <span class="tag tag-blue">AngularJS</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-label">ml / ai</span>
+                <div class="tech-tags">
+                  <span class="tag tag-purple">PyTorch</span>
+                  <span class="tag tag-purple">TensorFlow</span>
+                  <span class="tag tag-purple">scikit-learn</span>
+                  <span class="tag tag-purple">BERT / RoBERTa</span>
+                  <span class="tag tag-purple">Matplotlib</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-label">cloud / devops</span>
+                <div class="tech-tags">
+                  <span class="tag tag-teal">AWS</span>
+                  <span class="tag tag-teal">GCP</span>
+                  <span class="tag tag-teal">Docker</span>
+                  <span class="tag tag-teal">Kubernetes</span>
+                  <span class="tag tag-teal">Jenkins</span>
+                </div>
+              </div>
+              <div class="tech-group">
+                <span class="tech-group-label">data / tools</span>
+                <div class="tech-tags">
+                  <span class="tag tag-orange">SQL</span>
+                  <span class="tag tag-orange">BigQuery</span>
+                  <span class="tag tag-orange">Git</span>
+                  <span class="tag tag-orange">Linux</span>
+                  <span class="tag tag-orange">Jira</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ─── EXPERIENCE ─── -->
+        <article class="page" data-page="experience">
+          <div class="line-numbers" id="ln-experience"></div>
+          <div class="page-content">
+
+            <div class="code-comment"># Career Timeline</div>
+            <h2 class="page-title">Experience &amp; Education</h2>
+
+            <div class="timeline">
+
+              <div class="timeline-item current">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <div class="tl-meta">
+                    <span class="tl-date">Sep 2024 — Present</span>
+                    <span class="tl-badge badge-current">Current</span>
+                  </div>
+                  <h3 class="tl-title">MS in Computer Science</h3>
+                  <p class="tl-org">Columbia University · New York, USA</p>
+                  <ul class="tl-bullets">
+                    <li>Specializing in Machine Learning; relevant courses in Deep Learning, NLP, Cloud Computing, and Distributed Systems.</li>
+                    <li>Graduate Research Assistant (Oct–Dec 2024).</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <div class="tl-meta">
+                    <span class="tl-date">Aug 2021 — Jul 2024</span>
+                    <span class="tl-badge badge-work">Work</span>
+                  </div>
+                  <h3 class="tl-title">Member of Technical Staff 2</h3>
+                  <p class="tl-org">Nutanix · Bangalore, India</p>
+                  <ul class="tl-bullets">
+                    <li>Led development of a secure password management system in <span class="token-fn">Golang</span>, reducing security breaches by <span class="token-kw">20%</span> and improving industry compliance standards.</li>
+                    <li>Implemented multi-party authorization workflow and default password elimination feature, enabling a <span class="token-kw">$3B market opportunity</span>.</li>
+                    <li>Won <span class="token-str">Global Nutanix Hackathon</span> (250+ teams) for developing AI-based security recommendation system — advanced to product development.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <div class="tl-meta">
+                    <span class="tl-date">Aug 2021 — Jun 2022</span>
+                    <span class="tl-badge badge-work">Internship</span>
+                  </div>
+                  <h3 class="tl-title">Software Engineering Intern</h3>
+                  <p class="tl-org">Nutanix · Bangalore, India</p>
+                  <ul class="tl-bullets">
+                    <li>Built end-to-end security dashboard centralizing vulnerability management and STIG compliance.</li>
+                    <li>Automated regression testing framework, saving <span class="token-kw">50 hours/week</span> in manual effort.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <div class="tl-meta">
+                    <span class="tl-date">Oct 2020 — Jan 2022</span>
+                    <span class="tl-badge badge-research">Research</span>
+                  </div>
+                  <h3 class="tl-title">Research Intern</h3>
+                  <p class="tl-org">AIISC, University of South Carolina · Columbia, SC</p>
+                  <ul class="tl-bullets">
+                    <li>Developed <span class="token-fn">BERT</span>-based models achieving <span class="token-kw">85% accuracy</span> in substance abuse detection across 10,000+ Reddit posts.</li>
+                    <li>Created knowledge-assisted <span class="token-fn">RoBERTa</span> model for mental health symptom identification with <span class="token-kw">2.5% improved recall</span>.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <div class="tl-meta">
+                    <span class="tl-date">Jun 2021 — Aug 2021</span>
+                    <span class="tl-badge badge-research">Research</span>
+                  </div>
+                  <h3 class="tl-title">Summer Research Intern</h3>
+                  <p class="tl-org">University of Sheffield · Sheffield, UK</p>
+                  <ul class="tl-bullets">
+                    <li>Built multilingual ML model for detecting abuse on Twitter via emoji analysis, improving detection across <span class="token-kw">six languages</span>.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <div class="tl-meta">
+                    <span class="tl-date">Aug 2017 — Jun 2022</span>
+                    <span class="tl-badge badge-edu">Education</span>
+                  </div>
+                  <h3 class="tl-title">B.E. Computer Science &amp; M.Sc. Chemistry (Dual Degree)</h3>
+                  <p class="tl-org">BITS Pilani, Hyderabad Campus · Hyderabad, India</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+        <!-- ─── PROJECTS ─── -->
+        <article class="page" data-page="projects">
+          <div class="line-numbers" id="ln-projects"></div>
+          <div class="page-content">
+
+            <div class="code-comment"># Selected Work</div>
+            <h2 class="page-title">Projects</h2>
+
+            <div class="projects-grid">
+
+              <div class="project-card">
+                <div class="project-card-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <h3>NextWordPrediction</h3>
+                  <a href="https://github.com/triyashaCodes/NextWordPrediction" target="_blank" class="project-link-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+                <p class="project-desc">Next Word Prediction using LSTM with Attention mechanisms. Explores sequence modeling fundamentals for language generation tasks.</p>
+                <div class="project-tags">
+                  <span class="tag tag-purple">PyTorch</span>
+                  <span class="tag tag-purple">LSTM</span>
+                  <span class="tag tag-blue">Python</span>
+                  <span class="tag tag-orange">Jupyter</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-card-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                  <h3>AutoPromptGenie</h3>
+                  <a href="https://github.com/triyashaCodes/AutoPromptGenie" target="_blank" class="project-link-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+                <p class="project-desc">Automated prompt generation system for LLMs. Explores prompt optimization strategies to improve model output quality with minimal human intervention.</p>
+                <div class="project-tags">
+                  <span class="tag tag-purple">LLMs</span>
+                  <span class="tag tag-purple">NLP</span>
+                  <span class="tag tag-blue">Python</span>
+                  <span class="tag tag-orange">Jupyter</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-card-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  <h3>Collaborative Filtering</h3>
+                  <a href="https://github.com/triyashaCodes/Hands-On-Collaborative-Filtering" target="_blank" class="project-link-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+                <p class="project-desc">Hands-on exploration of how recommender systems work naively. Implements user-based and item-based collaborative filtering from scratch.</p>
+                <div class="project-tags">
+                  <span class="tag tag-purple">scikit-learn</span>
+                  <span class="tag tag-blue">Python</span>
+                  <span class="tag tag-orange">Jupyter</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-card-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  <h3>Foodgasm</h3>
+                  <a href="https://github.com/Aditi-Chowdhuri/Foodgasm" target="_blank" class="project-link-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  </a>
+                </div>
+                <p class="project-desc">A food discovery web application. Collaboratively built JavaScript app for exploring and discovering food options.</p>
+                <div class="project-tags">
+                  <span class="tag tag-blue">JavaScript</span>
+                  <span class="tag tag-teal">Web App</span>
+                </div>
+              </div>
+
+              <div class="project-card project-card-highlight">
+                <div class="project-card-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3l.14-.02A2.5 2.5 0 0 1 9.5 2"/></svg>
+                  <h3>AI Security Recommender</h3>
+                  <span class="tl-badge badge-work">🏆 Hackathon Winner</span>
+                </div>
+                <p class="project-desc">Won Global Nutanix Hackathon (250+ teams). AI-based security recommendation system — advanced to product development at Nutanix.</p>
+                <div class="project-tags">
+                  <span class="tag tag-purple">AI/ML</span>
+                  <span class="tag tag-blue">Python</span>
+                  <span class="tag tag-teal">AWS</span>
+                  <span class="tag tag-orange">Security</span>
+                </div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-card-header">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  <h3>Password Management System</h3>
+                  <span class="tl-badge badge-work">Production</span>
+                </div>
+                <p class="project-desc">Secure enterprise password management system in Golang, reducing security breaches by 20%. Implemented multi-party authorization workflows at Nutanix.</p>
+                <div class="project-tags">
+                  <span class="tag tag-blue">Golang</span>
+                  <span class="tag tag-teal">AWS</span>
+                  <span class="tag tag-teal">GCP</span>
+                  <span class="tag tag-orange">Security</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="projects-footer">
+              <a href="https://github.com/triyashaCodes" target="_blank" class="view-all-link">
+                View all repositories on GitHub
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── STATUS BAR ─── -->
+  <div class="status-bar">
+    <div class="status-left">
+      <span class="status-item">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        main
+      </span>
+      <span class="status-item status-dot-green">● Open to Work</span>
+    </div>
+    <div class="status-right">
+      <span class="status-item">Python · Golang · ML</span>
+      <span class="status-item">New York, USA</span>
+      <span class="status-item">UTF-8</span>
+    </div>
+  </div>
+
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
